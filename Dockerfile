@@ -10,7 +10,7 @@ ENV PYTHONUNBUFFERED=1
 RUN pip install pipenv
 
 # Install pip requirements
-COPY Pipfile* .
+COPY Pipfile* ./
 RUN python -m pipenv install --system --deploy
 
 WORKDIR /app
